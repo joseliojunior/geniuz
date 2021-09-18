@@ -1,5 +1,7 @@
 # Que bom ter você por aqui! ![](./img/icon.svg)
 
+## 🎮 Jogue em: [joseliojunior.github.io/geniuz/](joseliojunior.github.io/geniuz/)
+
 &nbsp;&nbsp;&nbsp;&nbsp; Este é um projeto é baseado nos jogos Genius (Brasil) e Simon (mudialmente) que teve sua maior popularidade entre os anos 80 aos anos 2000.
 
 > ℹ A tradução do jogo ocorre de forma automática baseado no idioma do navegador.
