@@ -143,6 +143,7 @@ const gameOver = () => {
         levelBonus.innerHTML = `${strings.levelBonus}: ${bonus}`;
         totalScore.innerHTML = `${strings.totalScore}: ${score + bonus}`;
         score = 0;
+        level = 0;
 
         newGame.onclick = () => {
             !mute && auNewGame.play();
@@ -156,6 +157,7 @@ const gameOver = () => {
 
     });
     scoreDisplay.innerHTML = `${strings.score}: 0`;
+    levelDisplay.innerHTML = `${strings.lv}: 0`;
     order.length = 0;
     playerOrder.length = 0;
 };
@@ -192,9 +194,30 @@ soundOff.onclick = () => {
     soundOff.style.display = 'none';
 };
 
-
 playNewGame.innerHTML = strings.newGame;
 gameOverTitle.innerHTML = strings.gameOver;
 scoreDisplay.innerHTML = `${strings.score}: 0`;
 levelDisplay.innerHTML = `${strings.lv}.0`;
 newGame.innerHTML = strings.newGame;
+
+[...document.getElementsByClassName('homepage')].forEach(e => e.innerHTML = strings.homepage);
+
+const fullscreenOn = document.getElementById('fullscreen-on'),
+fullscreenOff = document.getElementById('fullscreen-off');
+
+fullscreenOn.onclick = () => {
+    document.body.requestFullscreen();
+    fullscreenOn.style.display = 'none';
+    fullscreenOff.style.display = 'block';
+};
+
+fullscreenOff.onclick = () => {
+    document.exitFullscreen();
+    fullscreenOn.style.display = 'block';
+    fullscreenOff.style.display = 'none';
+};
+
+soundOn.ariaLabel = strings.soundOn;
+soundOff.ariaLabel = strings.soundOff;
+fullscreenOn.ariaLabel = strings.fullscreenOn;
+fullscreenOff.ariaLabel = strings.fullscreenOff;

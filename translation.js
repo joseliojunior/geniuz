@@ -33,6 +33,26 @@ const strings = {
     /** @returns {string} */
     get totalScore() {
         return translation(['Total score', 'Pontuação total']);
+    },
+    /** @returns {string} */
+    get soundOn() {
+        return translation(['Sound on', 'Som ligado']);
+    },
+    /** @returns {string} */
+    get soundOff() {
+        return translation(['Sound off', 'Som desligado']);
+    },
+    /** @returns {string} */
+    get fullscreenOn() {
+        return translation(['Fullscreen on', 'Tela cheia ligada']);
+    },
+    /** @returns {string} */
+    get fullscreenOff() {
+        return translation(['Fullscreen off', 'Tela cheia desligada']);
+    },
+    /** @returns {string} */
+    get homepage() {
+        return translation(['homepage', 'página<br>principal']);
     }
 };
 
