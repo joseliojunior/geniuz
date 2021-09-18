@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38.505mm" height="35.401mm" version="1.1" viewBox="0 0 38.504589 35.40073" xmlns="http://www.w3.org/2000/svg"><!--Created by: Josélio de S. C. Júnior - 2021 - joseliojunior-->
+<g transform="translate(-9.9433 -189.12)">
+<g opacity=".247">
+<path d="m15.952 202.91-3.3135 4.4542 8.6912-4.2369-6.3011 7.0616 5.0517-0.92343-1.0321 2.6074" fill="none" stroke="#4cc7ff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".59789"/>
+<rect transform="rotate(-12.783)" x="-20.329" y="206.52" width="5.7579" height="5.7579" fill="#ff6056" fill-rule="evenodd" opacity="1"/>
+<circle cx="17.255" cy="219.42" r="5.1061" fill="#ee85ff" fill-rule="evenodd" stroke-width=".59789"/>
+<rect transform="rotate(27.198)" x="123.81" y="177.61" width="5.7579" height="5.7579" ry=".55226" fill="none" opacity="1" stroke="#fff49a" stroke-width=".59789"/>
+<circle cx="40.368" cy="205.97" r="5.0255" fill="none" stroke="#00ffa6" stroke-width=".92193"/>
+<path transform="matrix(.72623 -2.1399 2.1399 .72623 -400.56 126)" d="m25.821 201.06-9.02e-4 -2e-3 -3.9294-2.2671 0.0023 2.6e-4 3.9281-2.2694-0.0014 2e-3z" fill="#4cc7ff" fill-rule="evenodd" stroke-width=".17621"/>
+<path transform="matrix(2.117 -.79055 .79055 2.117 -179.27 -205.6)" d="m25.821 201.06-9.02e-4 -2e-3 -3.9294-2.2671 0.0023 2.6e-4 3.9281-2.2694-0.0014 2e-3z" fill="none" stroke="#ee85ff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".26458"/>
+<rect transform="rotate(40.288)" x="131.81" y="136.2" width="11.298" height="3.911" fill="#00ffa6" fill-rule="evenodd" opacity="1"/>
+<ellipse transform="rotate(208.76)" cx="-129.75" cy="-149.52" rx="5.1061" ry="1.521" fill="#4cc7ff" fill-rule="evenodd" stroke-width=".32632"/>
+</g>
+</g>
+</svg>

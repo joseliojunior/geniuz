@@ -1,0 +1,256 @@
+/*
+ author: Josélio de S. C. Júnior <joseliojrx25@gmail.com>
+ copyright: Josélio de S. C. Júnior 2021
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --deep-blue: #110f1b;
+    --blue: rgb(23, 101, 173);
+    --blue-glow: rgb(73, 167, 255);
+    --blue-shadow: rgb(33, 148, 255);
+    --green: rgb(30, 180, 0);
+    --green-glow: rgb(154, 255, 134);
+    --green-shadow: rgb(72, 255, 35);
+    --red: rgb(156, 20, 10);
+    --red-glow: rgb(252, 89, 48);
+    --red-shadow: rgb(255, 39, 39);
+    --yellow: rgb(187, 162, 21);
+    --yellow-glow: rgb(255, 240, 157);
+    --yellow-shadow: rgb(255, 229, 83);
+    --pointer: url(img/cursor-pointer.svg), pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 4vmin;
+    cursor: url(img/cursor-default.svg), default;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--deep-blue);
+    background-image: url('img/texture.svg');
+    color: #ffffff;
+}
+
+#play {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 1;
+}
+
+#game-over {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+}
+
+.title {
+    font-size: 15vmin;
+    margin-bottom: 15px;
+    -webkit-text-stroke: 2px #ffffff;
+    animation: title-light 4s ease 0s infinite normal;
+}
+
+@keyframes title-light {
+    0% {
+        color: var(--blue-glow);
+        text-shadow: 0 0 20px var(--blue-shadow);
+    }
+    25% {
+        color: var(--green-glow);
+        text-shadow: 0 0 20px var(--green-shadow);
+    }
+    50% {
+        color: var(--red-glow);
+        text-shadow: 0 0 20px var(--red-shadow);
+    }
+    75% {
+        color: var(--yellow-glow);
+        text-shadow: 0 0 20px var(--yellow-shadow);
+    }
+    100% {
+        color: var(--blue-glow);
+        text-shadow: 0 0 20px var(--blue-shadow);
+    }
+}
+
+#game-over-title {
+    font-size: 8vmin;
+    margin-bottom: 16px;
+}
+
+.game-over-d {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 1em;
+    text-align: center;
+    margin: 8px;
+}
+
+.btn-style {
+    border-radius: 4px;
+    background: #70ff38;
+    color: #000000;
+    cursor: var(--pointer);
+}
+
+.btn-style:hover {
+    filter: invert(1);
+}
+
+.btn {
+    min-width: 45vmin;
+    padding: 8px 16px;
+    margin: 8px;
+}
+
+.game-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent 0%, var(--deep-blue) 20%,  var(--deep-blue) 50%, var(--deep-blue) 80%, transparent 100%);
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    width: 90%;
+    padding: 8px 0;
+}
+
+#score {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.sound-icon {
+    width: 28px;
+    z-index: 2;
+    padding: 4px 8px;
+}
+
+#sound-off {
+    display: none;
+}
+
+#level {
+    margin: 8px;
+}
+
+.blink {
+    animation: blink .2s none 0s infinite normal;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.main-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.game {
+    width: calc(80vmin - 1.5em - 80px);
+    height: calc(80vmin - 1.5em - 80px);
+    display: grid;
+    grid-template-areas: 'x x' 'x x';
+    gap: 6%;
+    border-radius: 100%;
+    padding: 30px;
+    background: radial-gradient(farthest-side at 80% 20%, rgb(41, 41, 41), rgb(19, 19, 19));
+    box-shadow: inset rgba(255, 255, 255, .1) 3px -3px 3px, inset rgba(0, 0, 0, .4) -3px 3px 3px;
+}
+
+#blue, #red, #green, #yellow {
+    border-radius: 10px;
+    box-shadow: inset rgba(0, 0, 0, 0.267) 4px -4px 3px,
+    inset rgba(255, 255, 255, 0.493) -4px 4px 3px;
+    cursor: var(--pointer);
+}
+
+#blue {
+    background: var(--blue);
+    border-bottom-left-radius: 100%;
+}
+
+#green {
+    background: var(--green);
+    border-top-right-radius: 100%;
+}
+
+#red {
+    background: var(--red);
+    border-top-left-radius: 100%;
+}
+
+#yellow {
+    background: var(--yellow);
+    border-bottom-right-radius: 100%;
+}
+
+.selected0, .selected1, .selected2, .selected3 {
+    transition: ease all .125s;
+    --light: saturate(1.2) brightness(1.8);
+    --light-inside: 0 0 2em;
+    --light-halo: 0px 0px 8px;
+}
+
+.selected0 {
+    box-shadow: inset var(--blue-glow) var(--light-inside); 
+    filter: var(--light) drop-shadow(var(--light-halo) var(--blue-shadow));
+}
+
+.selected1 {
+    box-shadow: inset var(--green-glow) var(--light-inside); 
+    filter: var(--light) drop-shadow(var(--light-halo) var(--green-shadow));
+}
+
+.selected2 {
+    box-shadow: inset var(--red-glow) var(--light-inside); 
+    filter: var(--light) drop-shadow(var(--light-halo) var(--red-shadow));
+}
+
+.selected3 {
+    box-shadow: inset var(--yellow-glow) var(--light-inside); 
+    filter: var(--light) drop-shadow(var(--light-halo) var(--yellow-shadow));
+}

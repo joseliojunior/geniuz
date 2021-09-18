@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Genius-like game">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Josélio de S. C. Júnior - 2021 - joseliojunior">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.svg" type="image/x-icon">
+    <title>Geniuz</title>
+</head>
+<body>
+    <section id="play">
+        <div class="title">Geniuz</div>
+        <button id="play-new-game" class="btn-style btn">new game</button>
+        <a href="https://github.com/joseliojunior" target="_blank">
+            <button class="btn-style btn">github</button>
+        </a>
+    </section>
+    <section id="game-over">
+        <div id="game-over-title">Game over</div>
+        <div id="game-over-score" class="game-over-d"></div>
+        <div id="level-bonus" class="game-over-d"></div>
+        <div id="total-score" class="game-over-d"></div>
+        <button id="restart-new-game" class="btn-style btn">new game</button>
+        <a href="https://github.com/joseliojunior" target="_blank">
+            <button class="btn-style btn">github</button>
+        </a>
+    </section>
+    <section class="game-box">
+        <div class="header-box">
+            <div id="score"> Score: 0 </div>
+            <img id="sound-on" class="btn-style sound-icon" src="./img/noteOn.svg">
+            <img id="sound-off" class="btn-style sound-icon" src="./img/noteOff.svg">
+        </div>
+        <div class="main-game">
+            <div class="game">
+                <div id="red"></div>
+                <div id="green"></div>
+                <div id="blue"></div>
+                <div id="yellow"></div>
+            </div>
+        </div>
+        <div id="level">LV.0</div>
+    </section>
+</body>
+<script type="module" src="script.js"></script>
+</html>
